@@ -3,8 +3,8 @@ package org.launchcode.javawebdevtechjobspersistent.models;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @MappedSuperclass
@@ -14,7 +14,7 @@ public abstract class AbstractEntity {
     private int id;
 
     @NotBlank
-    @Max(66)
+    @Size(min = 1, max = 66, message = "Must be between 1 and 66 characters")
     //the world's longest name is 666 characters long, 10% of that is good enough.
     private String name;
 
