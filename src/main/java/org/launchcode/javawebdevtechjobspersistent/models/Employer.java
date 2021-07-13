@@ -16,7 +16,7 @@ public class Employer extends AbstractEntity {
     private final List<Job> jobs = new ArrayList<>();
 
     @NotBlank
-    @Size(min = 1, max = 86, message = "Must be less than 86 characters")
+    @Size(min = 1, max = 86, message = "Location cannot exceed 86 characters")
     private String location;
 
     public Employer(){
