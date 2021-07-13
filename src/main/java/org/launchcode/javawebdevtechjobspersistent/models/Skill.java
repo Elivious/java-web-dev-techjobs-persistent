@@ -9,21 +9,11 @@ import java.util.List;
 
 @Entity
 public class Skill extends AbstractEntity {
-    @NotBlank
-    @Size(min = 1, max = 50, message = "Please enter fewer than 50 characters")
-    private String skill;
+
 
     @NotBlank
     @Size(min = 1, max = 255, message = "Description cannot exceed 255 characters")
     private String description;
-
-    public String getSkill() {
-        return skill;
-    }
-
-    public void setSkill(String skill) {
-        this.skill = skill;
-    }
 
     public String getDescription() {
         return description;
